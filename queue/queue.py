@@ -28,3 +28,22 @@ class Queue:
 
   def len(self):
     pass
+
+
+class Linked_List:
+	def __init__(self):
+		self.head = None
+		self.tail = None
+
+ 	def change_head(self, node=None):
+		if self.head == None:
+			self.head = node
+			self.tail = node
+		else:
+			temp = self.head.get_next()
+			self.head = temp
+
+ 	def change_tail(self, node):
+		value = Node(node)
+		self.tail.next_node = value
+		value = self.tail
