@@ -118,4 +118,12 @@ class DoublyLinkedList:
     self.length = self.length - 1
     
   def get_max(self):
-    pass
+    if not self.head:
+      return None
+    current_node = self.head
+    max_node = self.head.value
+    while current_node:
+      if current_node.value > max_node:
+        max_node = current_node.value
+      current_node = current_node.next
+    return max_node
