@@ -15,7 +15,16 @@ class Queue:
 			self.size += 1
   
   def dequeue(self):
-    pass
+     if self.storage.head == None:
+			return None
+		else:
+			removed_node = Node(self.storage.head.get_value())
+			self.storage.change_head()
+			self.size -= 1
+			return removed_node.get_value()
+
+  def len(self):
+    return self.size
 
   def len(self):
     pass
