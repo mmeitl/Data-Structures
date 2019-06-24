@@ -87,7 +87,14 @@ class DoublyLinkedList:
      return value
 
   def move_to_front(self, node):
-    pass
+    if node == self.head:
+      return None
+
+     self.add_to_head(node.value)
+    if node == self.tail:
+      self.tail = self.tail.next
+      node.delete()
+    self.length = self.length -1
 
   def move_to_end(self, node):
     pass
