@@ -5,6 +5,7 @@ class BinarySearchTree:
     self.right = None
 
   def insert(self, value):
+    #start code for the day
     pass
 
   def contains(self, target):
